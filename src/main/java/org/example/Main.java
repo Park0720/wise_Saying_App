@@ -17,6 +17,7 @@ public class Main {
                 String wise_Saying = sc.nextLine();
                 System.out.printf("작가 : ");
                 String auther = sc.nextLine();
+                System.out.println("1번 명언이 등록되었습니다.");
             }
         }
     }
