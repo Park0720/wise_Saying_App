@@ -34,6 +34,10 @@ public class Main {
                     System.out.println(wise.get(i).getId() + " / " + wise.get(i).getAuther()+ " / " + wise.get(i).getWise_Saying());;
                 }
             }
+            else if(order.equals("삭제?id=1")){
+                wise.remove(0);
+                System.out.println("1번 명언이 삭제 되었습니다.");
+            }
         }
     }
 }
