@@ -44,6 +44,18 @@ public class Main {
                     System.out.println("1번 명언은 존재하지 않습니다.");
                 }
             }
+            else if(order.equals("수정?id=2")){
+                if(wise.get(0).getId()==2) {
+                    System.out.println("명언(기존) : " + wise.get(0).getWise_Saying());
+                    System.out.printf("명언 : ");
+                    String wise_Saying = sc.nextLine().trim();
+                    System.out.println("작가(기존) : " + wise.get(0).getAuther());
+                    System.out.printf("작가 : ");
+                    String auther = sc.nextLine().trim();
+                    wise.get(0).setWise_Saying(wise_Saying);
+                    wise.get(0).setAuther(auther);
+                }
+            }
         }
     }
 }
@@ -69,5 +81,17 @@ class Wise {
 
     public String getAuther() {
         return auther;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setWise_Saying(String wise_Saying) {
+        this.wise_Saying = wise_Saying;
+    }
+
+    public void setAuther(String auther) {
+        this.auther = auther;
     }
 }
