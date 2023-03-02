@@ -29,14 +29,20 @@ public class Main {
                 lastWiseSaying = id;
             }
             else if (order.equals("목록")) {
-                System.out.println("번호 / 작가 / 명언\n------------------------");
+                System.out.println("번호 / 작가 / 명언\n"+"-".repeat(30));
                 for(int i = wise.size()-1; i>=0;i--){
                     System.out.println(wise.get(i).getId() + " / " + wise.get(i).getAuther()+ " / " + wise.get(i).getWise_Saying());;
                 }
             }
             else if(order.equals("삭제?id=1")){
-                wise.remove(0);
-                System.out.println("1번 명언이 삭제 되었습니다.");
+                if (wise.get(0).getId() == 1){
+                    System.out.println(wise.get(0).getId()+"번 명언이 삭제 되었습니다.");
+                    wise.remove(0);
+
+                }
+                else{
+                    System.out.println("1번 명언은 존재하지 않습니다.");
+                }
             }
         }
     }
